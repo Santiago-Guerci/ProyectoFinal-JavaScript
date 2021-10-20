@@ -1,0 +1,97 @@
+/* Footer */
+@import '../componentes/listas';
+
+footer {
+    background-color: map-get($colores, footerBg);
+    border-top: 2px solid blanchedalmond;
+}
+
+.imgFooter1 {
+    margin: 10px auto;
+    width: 30%;
+
+    @media only screen and (max-width: 576px) {
+        width: 45%;
+    }
+    @media only screen and (min-width: 577px) and (max-width: 768px) {
+        width: 46%;
+    }
+    @media only screen and (min-width: 769px) and (max-width: 992px) {
+        width: 50%;
+    }
+}
+
+.imgFooter2 {
+    margin: 10px 0 10px 35px;
+
+    @media only screen and (max-width: 576px) {
+        display: none;
+    }
+    @media only screen and (min-width: 577px) and (max-width: 768px) {
+        display: none;
+    }
+    @media only screen and (min-width: 769px) and (max-width: 992px) {
+        display: none;
+    }
+}
+
+.parrafoFooter {
+    margin-bottom: 0;
+    @media only screen and (max-width: 576px) {
+        display: none;
+    }
+    @media only screen and (min-width: 577px) and (max-width: 768px) {
+        display: none;
+    }
+    @media only screen and (min-width: 769px) and (max-width: 992px) {
+        display: none;
+    }
+}
+
+.divRedes {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.red {
+    width: 60px;
+    transition: all 0.5s ease-in-out;
+
+    @media only screen and (max-width: 576px) {
+        width: 53px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    @media only screen and (min-width: 577px) and (max-width: 768px) {
+        width: 53px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    @media only screen and (min-width: 769px) and (max-width: 992px) {
+        width: 53px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+.facebook:hover {
+    content: url(../Multimedia/pngFacebook2.png);
+    transform: rotate(0.25turn) rotate(0.25turn) rotate(0.25turn) rotate(0.25turn);
+}
+
+.instagram:hover {
+    content: url(../Multimedia/pngInstagram2.png);
+    transform: rotate(0.25turn) rotate(0.25turn) rotate(0.25turn) rotate(0.25turn);
+}
+
+.linkedIn:hover {
+    content: url(../Multimedia/pngLinkedin2.png);
+    transform: rotate(0.25turn) rotate(0.25turn) rotate(0.25turn) rotate(0.25turn);
+}
+
+.fixed {
+    position: fixed;
+    bottom: 2%;
+    right: 1%;
+    z-index: 1;
+}

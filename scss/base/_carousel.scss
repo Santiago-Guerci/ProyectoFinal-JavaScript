@@ -1,0 +1,33 @@
+/* Sección Elaboración */
+#Elaboracion {
+    border-top: 2px solid blanchedalmond;
+    border-bottom: 2px solid blanchedalmond;
+}
+
+.contenedorCarousel {
+    width: 70%;
+
+    @media only screen and (max-width: 576px) {
+        width: 100%;
+    }
+}
+
+/* clase de bootstrap donde tenía que corregir algunas propiedades predeterminadas */
+.carousel-caption {
+    background-color: map-get($colores, carouselBg);
+    color: map-get($colores, secundario);
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.estiloBordeCarousel {
+    border: 2px solid blanchedalmond;
+    border-radius: 30px;
+
+    @media only screen and (max-width: 576px) {
+        border: none;
+        border-radius: 0;
+    }
+}
+/* Fin seccion Elaboración */

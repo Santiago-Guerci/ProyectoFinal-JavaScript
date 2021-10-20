@@ -1,0 +1,28 @@
+%imgProd {
+    width: 75%;
+    margin: 2% 10px 2% 10px;
+    border: 3px solid white;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+%descLink {
+    font-family: 'Sarabun';
+    font-size: 1em;
+    width: 80%;
+    color: map-get($colores, secundario);
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 25px;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        background-color: rgb(0, 0, 0, .5);
+        border-radius: 3px;
+        color: map-get($colores, secundario);
+    }
+}

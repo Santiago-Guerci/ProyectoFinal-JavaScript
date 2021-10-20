@@ -1,0 +1,70 @@
+/* Sección Compras */
+@import '../componentes/listas';
+
+#Comprar {
+    background-color: map-get($colores, primarioBg);
+    border-bottom: 2px solid blanchedalmond;
+    margin-bottom: 5%;
+
+    h2 {
+        padding-bottom: 35px;
+    }
+}
+
+.compras { 
+    display: grid;
+    grid-template-areas: "gridTitle gridTitle"
+                         "gridMap gridParagraph";
+    justify-content: space-around;
+    align-items: center;
+
+    @media only screen and (max-width: 576px) {
+        grid-template-areas: "gridTitle"
+                             "gridMap"
+                             "gridParagraph";
+    }
+
+    @media only screen and (min-width: 577px) and (max-width: 768px) {
+        grid-template-areas: "gridTitle"
+                             "gridMap"
+                             "gridParagraph";
+    }
+}
+
+.parrafoSedes {
+    max-width: 484px;
+    font-size: large;
+
+    @media only screen and (max-width: 576px) {
+        font-size: medium;
+    }
+
+    @media only screen and (min-width: 577px) and (max-width: 768px) {
+        font-size: medium;
+    }
+
+    @media only screen and (min-width: 769px) and (max-width: 992px) {
+        font-size: medium;
+    }
+}
+
+.mapa {
+    margin: 10px 10px 25px 25px;
+    width: 450px;
+    height: 300px;
+    border: 5px inset rgb(240, 128, 128);
+
+    @media only screen and (max-width: 576px) {
+        width: 100%;
+        height: 280px;
+        margin: 0 0 10px 0;
+    }
+}
+
+/* Seccion declaración grid */
+.gridTitle {grid-area: gridTitle;}
+.gridMap {grid-area: gridMap;}
+.gridParagraph {grid-area: gridParagraph;}
+/* Fin seccion declaración grid */
+
+/* Fin sección compras */

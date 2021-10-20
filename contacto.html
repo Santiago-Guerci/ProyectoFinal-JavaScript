@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Meta tags -->
+    <meta name="description" content="Pastelería y panadería hecha en casa, venta de productos dulces y salados, y servicio de cátering. Hecho con ingredientes de calidad, dedicación y pasión.">
+    <meta name="keywords" content="pastelería, panadería, casero, dulce, salado, macarons, pan, facturas, vinos, tortas, productos, desayunos, meriendas, surtidos, tienda, cátering, cocinero, chef, gastronomía, floresta.">
+    <meta name="copyright" content="Axel Cocina">
+    <meta name="author" content="Santiago Guerci">
+    <meta http-equiv="content-language" content="es-ar">
+    <meta name="language" content="Spanish">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Axel Cocina">
+    <meta property="og:type" content="website">
+    <meta property="og:image" itemprop="image" content="../Multimedia/axelCocinaLogo.png">
+    <meta property="og:url" content="http://www.axelcocina.com.ar/">
+    <meta property="og:description" content="Pastelería y panadería">
+    <meta property="og:locale" content="es_AR">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="Multimedia/favicon.ico" type="image/x-icon">
+
+    <title>Axel Cocina - Contacto</title>
+</head>
+<body>
+    <a class="fixed" href="https://api.whatsapp.com/send/?phone=541157224718&text&app_absent=0"> <img class="red" src="Multimedia/pngWhatsappVerde.png" alt="Whatsapp"> </a>
+
+    <!-- Inicio sección Header -->
+    <header class="w-100 border-bottom border-dark border-2">
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+              <ul class="navbar-nav listaMenu">
+                <li class="nav-item listaHeader">
+                  <a class="nav-link active" aria-current="page" href="index.html#Historia">Historia</a>
+                </li>
+                <li class="nav-item dropdown listaHeader">
+                  <a class="nav-link dropdown-toggle" href="index.html#Productos" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Productos
+                  </a>
+                  <ul class="dropdown-menu subMenu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item subItem" href="index.html#Productos">Box Desayunos</a></li>
+                    <li><a class="dropdown-item subItem" href="index.html#Productos">Box Surtidos</a></li>
+                    <li><a class="dropdown-item subItem" href="index.html#Productos">Box Vinos</a></li>
+                    <li><a class="dropdown-item subItem" href="index.html#Productos">Box Mini Tortas</a></li>
+                  </ul>
+                </li>
+                <a class="navbar-brand listaHeader" href="index.html"><img class="logoHeader navbarImg" src="Multimedia/axelCocinaLogo.png" alt="logo"></a>
+                <li class="nav-item listaHeader">
+                  <a class="nav-link" href="index.html#Comprar">Como Comprar</a>
+                </li>
+                <li class="nav-item listaHeader">
+                  <a class="nav-link" href="#Formulario">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="https://axelcocina.mitiendanube.com"> <img class="imgTienda" src="Multimedia/carritoCompras.png" alt="Tienda"> </a>
+      </nav>
+  </header>
+  <!-- Fin sección Header -->
+
+    <section id="Formulario">
+      <div class="container pb-4">
+        <h1 style="display: flex; align-items: flex-end; justify-content: center;">
+          Contacto
+        </h1>
+
+        <form class="row g-3 pt-3" action="enviar.php" method="POST" name="contact-form">
+          <div class="col-md-6">
+            <label for="nombre" class="form-label formText"> Nombre </label>
+            <input type="text" class="form-control" id="nombre" name="nombre">
+          </div>
+          <div class="col-md-6">
+            <label for="apellido" class="form-label formText"> Apellido </label>
+            <input type="text" class="form-control" id="apellido" name="apellido">
+          </div>
+          <div class="col-12">
+            <label for="direccion" class="form-label formText"> Dirección </label>
+            <input type="text" class="form-control" id="direccion" placeholder="Calle Falsa 123 B" name="direccion">
+          </div>
+          <div class="col-12">
+            <label for="email" class="form-label formText"> Correo Electrónico </label>
+            <input type="email" class="form-control" id="email" placeholder="micorreo@algo.com" name="email">
+          </div>
+          <div class="col-md-6">
+            <label for="ciudad" class="form-label formText"> Localidad </label>
+            <input type="text" class="form-control" id="ciudad" name="ciudad">
+          </div>
+          <div class="col-md-4">
+            <label for="provincia" class="form-label formText"> Provincia </label>
+            <select id="provincia" class="form-select" name="provincia">
+              <option selected> Elegí </option>
+              <option> Buenos Aires </option>
+              <option> Córdoba </option>
+              <option> Mendoza </option>
+              <option> Neuquen </option>
+              <option> Río Negro </option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="codigoPostal" class="form-label formText"> Código Postal </label>
+            <input type="text" class="form-control" id="codigoPostal" name="codigoPostal">
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label formText" for="gridCheck">
+                Deseo recibir noticias a mi correo electrónico.
+              </label>
+            </div>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn formText"> Enviar </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="d-flex align-items-center justify-content-evenly">
+      <div class="d-inline-block">
+        <!-- Logo -->
+        <img class="imgFooter1" src="Multimedia/axelcocinaLogo2.PNG" alt="Logo Axelcocina">
+        <img class="imgFooter2" src="Multimedia/puntaje.PNG" alt="Puntaje de Google">
+      </div>
+      <div class="d-inline-flex">
+        <p class="parrafoFooter"> Seguime en las redes sociales! </p>
+      </div>
+      <div class="d-inline-block">
+        <nav>
+          <ul class="d-flex divRedes">
+              <li> <a href="https://www.facebook.com/Axelcocina-110121450705197"> <img class="red facebook" src="Multimedia/pngFacebook1.png" alt="Facebook"> </a> </li>
+              <li> <a href="https://www.instagram.com/axelcocina"> <img class="red instagram" src="Multimedia/pngInstagram1.png" alt="Instagram"> </a> </li>
+              <li> <a href="https://www.linkedin.com/in/axel-wainstein-90b10a119/"> <img class="red linkedIn" src="Multimedia/pngLinkedin1.png" alt="Linkedin"> </a> </li>
+          </ul>
+        </nav>
+      </div>
+  </footer>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

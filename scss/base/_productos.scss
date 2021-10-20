@@ -1,0 +1,82 @@
+/* Sección Productos */ /* Hecho con grids */
+@import '../componentes/listas';
+@import '../componentes/extends';
+
+#Productos {
+    background-color: map-get($colores, primarioBg);
+    color: map-get($colores, secundario);
+    border-top: 2px solid blanchedalmond;
+}
+
+h2 {
+    font-family: 'Philosopher';
+    color: map-get($colores, secundario);
+    text-align: center;
+    font-size: 35px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    text-decoration: 2px whitesmoke underline;
+}
+
+.gridContainer {
+    display: grid;
+    justify-items: center;
+    align-items: stretch; 
+    grid-row-gap: 15px;
+    grid-template-areas: "prodGrid1 prodGrid2 prodGrid3 prodGrid4"
+                         "textGrid1 textGrid2 textGrid3 textGrid4";
+
+    @media only screen and (max-width: 576px) {
+        grid-template-areas: "prodGrid1"
+                                "textGrid1"
+                                "prodGrid2"
+                                "textGrid2"
+                                "prodGrid3"
+                                "textGrid3"
+                                "prodGrid4"
+                                "textGrid4";
+    }
+
+    @media only screen and (min-width: 577px) and (max-width: 768px) {
+        grid-template-areas: "prodGrid1 prodGrid2"
+                             "textGrid1 textGrid2"
+                             "prodGrid3 prodGrid4"
+                             "textGrid3 textGrid4";
+    }
+}
+
+/*Nueva seccion grid areas*/
+.prodGrid1 {
+    @extend %imgProd;
+    grid-area: prodGrid1;
+}
+.prodGrid2 {
+    @extend %imgProd;
+    grid-area: prodGrid2;
+}
+.prodGrid3 {
+    @extend %imgProd;
+    grid-area: prodGrid3;
+}
+.prodGrid4 {
+    @extend %imgProd;
+    grid-area: prodGrid4;
+}
+.textGrid1 {
+    @extend %descLink;
+    grid-area: textGrid1;
+}
+.textGrid2 {
+    @extend %descLink;
+    grid-area: textGrid2;
+}
+.textGrid3 {
+    @extend %descLink;
+    grid-area: textGrid3;
+}
+.textGrid4 {
+    @extend %descLink;
+    grid-area: textGrid4;
+}
+/*Fin parte grid area*/
+/*Fin sección Productos*/

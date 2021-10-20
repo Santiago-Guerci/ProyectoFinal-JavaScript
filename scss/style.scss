@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(113, 33, 48);
+    background-image: url('../Multimedia/panPrueba2.png');
+    background-size: cover;
+}
+
+@import 'componentes/fonts';
+@import 'componentes/listas';
+@import 'base/header';
+@import 'base/historia';
+@import 'base/productos';
+@import 'base/carousel';
+@import 'base/compras';
+@import 'base/contacto';
+@import 'base/footer';
+@import 'base/404';

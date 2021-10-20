@@ -1,0 +1,126 @@
+/* Primero, el header */
+@import '../componentes/listas';
+
+header {
+    background-color: map-get($colores, secundario);
+    
+    a {
+        &:link, &:visited {
+            text-decoration: none;
+            color: map-get($colores, primario);
+        }
+    }
+}
+
+.listaMenu {
+    align-items: center;
+}
+
+// ul {
+//     list-style: none;
+
+//     ul {
+//         position: absolute;
+//         display: none;
+//         left: -10px;
+//     }
+
+//     li {
+//         &:hover {
+//             ul {
+//                 display: block;
+//             }
+//         }
+//     }
+// }
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+color: map-get($colores, primario);
+}
+.navbar-light .navbar-nav .nav-link {
+    color: map-get($colores, primario);
+}
+.navbar {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+/* Tuve que arreglarlo porque bootstrap me lo pisaba */
+.listaHeader {
+    font-family: 'Open Sans';
+    color: map-get($colores, primario);
+    font-size: 23px;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    transition: all 1s;
+
+    &:hover {
+        text-shadow: 2px 2px 4px black;
+    }
+}
+
+.subMenu {
+    left: 4px;
+    padding: 0 0;
+    background-color: map-get($colores, secundario);
+}
+
+.subItem {
+    text-shadow: none;
+
+    &:hover {
+        text-shadow: 2px 2px 4px black;
+        background-color: map-get($colores, hoverSubItem);
+    }
+}
+
+.logoHeader {
+    width: 46%;
+    transition: all .5s;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 0;
+}
+
+.imgTienda {
+    display: inline-block;
+    position: absolute;
+    top: 33%;
+    right: 3%;
+    width: 30px;
+
+    &:hover {
+        content: url(../Multimedia/carritoComprasHover.png);
+    }
+
+    @media only screen and (max-width: 576px) {
+        top: 21%;
+    }
+    @media only screen and (min-width: 577px) and (max-width: 768px) {
+        top: 21%;
+    }
+    @media only screen and (min-width: 769px) and (max-width: 992px) {
+        top: 21%;
+    }
+}
+
+.navbarImg {
+    @media only screen and (max-width: 576px) {
+        display: none;
+    }
+    @media only screen and (min-width: 577px) and (max-width: 768px) {
+        display: none;
+    }
+    @media only screen and (min-width: 769px) and (max-width: 992px) {
+        display: none;
+    }
+}
+/* Fin header */

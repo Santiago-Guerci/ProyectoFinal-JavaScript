@@ -1,0 +1,21 @@
+// $colors:
+// rgb(113, 33, 48, .8), /* bg ppal transparencia */
+// blanchedalmond, /* Secundario */
+// rgb(243, 219, 182), /* hover de los subitems */
+// #291d20, /* Footer */
+// rgba(0, 0, 0, 0.7), /* bg texto carousel */
+// rgb(113, 33, 48), /* ppal sin transparencia */
+// whitesmoke;
+
+// Cambié la lista por un map porque me pareció más práctico para la elección y modificación de los colores.
+
+
+$colores: (
+    "primario":rgb(113, 33, 48),
+    "primarioBg": rgb(113, 33, 48, .8),
+    "secundario": blanchedalmond,
+    "hoverSubItem": rgb(243, 219, 182),
+    "footerBg": #291d20,
+    "carouselBg": rgba(0, 0, 0, 0.7),
+    "blanqueado": whitesmoke
+)

@@ -1,0 +1,83 @@
+@media only screen and (max-width: 576px) {
+    .gridContainer {
+        grid-template-areas: "prodGrid1"
+                             "textGrid1"
+                             "prodGrid2"
+                             "textGrid2"
+                             "prodGrid3"
+                             "textGrid3"
+                             "prodGrid4"
+                             "textGrid4";
+    }
+    .compras {
+        grid-template-areas: "gridTitle"
+                             "gridMap"
+                             "gridParagraph";
+    }
+    .imgTienda {top: 25%;}
+    .estiloBordeCarousel {
+        border: none;
+        border-radius: 0;
+    }
+    .contenedorCarousel {width: 100%;}
+    .navbarImg {display: none;}
+    .parrafoFooter {display: none;}
+    .imgFooter1 {width: 45%;}
+    .imgFooter2 {display: none;}
+    .red {
+        width: 53px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .parrafoSedes {
+        font-size: medium;
+    }
+    .mapa {
+        width: 100%;
+        height: 280px;
+        margin: 0 0 10px 0;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .gridContainer {
+        grid-template-areas: "prodGrid1 prodGrid2"
+                             "textGrid1 textGrid2"
+                             "prodGrid3 prodGrid4"
+                             "textGrid3 textGrid4";
+    }
+    .compras {
+        grid-template-areas: "gridTitle"
+                             "gridMap"
+                             "gridParagraph";
+    }
+    .imgTienda {top: 25%;}
+    .navbarImg {display: none;}
+    .parrafoFooter {display: none;}
+    .imgFooter1 {width: 46%;}
+    .imgFooter2 {display: none;}
+    .red {
+        width: 53px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .parrafoSedes {
+        font-size: medium;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .navbarImg {display: none;}
+    .parrafoFooter {display: none;}
+    .imgFooter1 {width: 50%;}
+    .imgFooter2 {display: none;}
+    .red {
+        width: 53px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .parrafoSedes {
+        font-size: medium;
+    }
+}
