@@ -1,125 +1,23 @@
-//Simulador carrito de compras de AxelCocina
+//Voy a utilizar esta copia de mi proyecto final para realizar el resto de los ejercicios. Ahora entrego el ejercicio de DOM
+// Eliminé todo el simulador de la primer entrega del proyecto, total lo tengo en otro repositorio
 
-// 1)Armar caja: array con objetos "producto" {producto, cantidad y precio}
-//   Y luego un array de arrays (es decir, un pedido con varias cajas).
-//   Cada caja aceptará un máximo de 3 productos.
+let nombre = prompt("Ingrese su nombre");
+let titulo = document.getElementById("titulo");
+let seccionDOM = document.getElementById("seccionDOM");
 
-//=============== Variables y Funciones ===================
-let productoElegido = 0;
-let precio = 0;
-let cantidadProducto = 0;
-let valorFinal = 0;
-const arrayCaja1 = [];
-const arrayCaja2 = [];
+titulo.textContent = `Bienvenido ${nombre}, AxelCocina lo saluda`;
 
-class Producto {
+//ahora quiero agregar el mismo párrafo que está debajo del h1, pero con DOM en vez del html. class="parrafoHistoria"
 
-    constructor(producto, precio, cantidad, id) {
-        this.producto = producto;
-        this.precio = precio;
-        this.cantidad = cantidad;
-        this.subTotal = this.precio * this.cantidad;
-        this.id = id;
-    }
+let parrafo = document.createElement('p');
+parrafo.innerHTML = `Mi nombre es <strong>Axel</strong>, chef, pastelero e hincha de river. <strong>Cocinar</strong> es lo que más me gusta y es por eso que me dedico a esto.
+                    Empecé en la casa de mis padres, con una cocina muy chica. Ahí miraba mucho cómo cocinaba mi vieja, y la ayudaba cuando podía.
+                    Despues me profesionalicé estudiando en el IAG y me recibí de Cocinero Profesional, y ahí fue cuando mis viejos me regalaron 
+                    un freezer aparte para poder comenzar con este emprendimiento.`
+
+function agregarParrafoConClase() {
+    parrafo.classList.add("parrafoHistoria");
+    seccionDOM.appendChild(parrafo);
 }
 
-function agregarProducto() {
-
-    //!productoElegido quiere decir que mientras no sea un número (ya que es el input esperado).
-
-    while(!productoElegido || productoElegido == 0 || productoElegido > 8) {
-        productoElegido = parseInt(prompt("Ingrese un producto a incluir en la caja\n 1: Pan de Masa Madre($300)\n 2: Chipa($100)\n 3: Cookies($80)\n 4: Macarons($120)\n 5: Minitorta Brownie($450)\n 6: Minitorta Cheesecake($400)\n 7: Minitorta Lemon Pie($450)"));
-    }
-    
-    switch(productoElegido){
-        case 1:
-            productoElegido = "Pan de Masa Madre";
-            precio = 300;
-            id = 1;
-            break;
-        case 2:
-            productoElegido = "Chipa";
-            precio = 100;
-            id = 2;
-            break;
-        case 3:
-            productoElegido = "Cookies";
-            precio = 80;
-            id = 3;
-            break;
-        case 4:
-            productoElegido = "Macarons";
-            precio = 120;
-            id = 4;
-            break;
-        case 5:
-            productoElegido = "Minitorta Brownie";
-            precio = 450;
-            id = 5;
-            break;
-        case 6:
-            productoElegido = "Minitorta Cheesecake";
-            precio = 400;
-            id = 6;
-            break;
-        case 7:
-            productoElegido = "Minitorta Lemon Pie";
-            precio = 450;
-            id = 7;
-            break;
-    }
-
-    while(!cantidadProducto || cantidadProducto == 0 || cantidadProducto > 3) {
-        cantidadProducto = parseInt(prompt("Ingrese la cantidad de ejemplares de "+productoElegido+" que desea agregar en la caja (Máx. 3)"));
-    }
-
-    return (new Producto(productoElegido, precio, cantidadProducto, id));
-}
-
-
-
-
-
-
-//=============== Correr el programa ===================
-
-alert("Bienvenido a AxelCocina - Panadería y Pastelería\nAquí podrá armar dos cajas de tres productos, y luego proceder a comprarlas.");
-
-//Necesito pedir 3 veces por caja. Pido 3 veces, corto, armo una caja y la pusheo al array de pedido, y luego vuelvo a pedir.
-for(let i = 0; i < 3; i++) {
-    arrayCaja1.push( agregarProducto() );
-    productoElegido = 0;
-    precio = 0;
-    cantidadProducto = 0;
-}
-
-console.log(arrayCaja1);
-alert("Su primer caja está completa. Ahora complete la segunda caja");
-
-for(let i = 0; i < 3; i++) {
-    arrayCaja2.push( agregarProducto() );
-    productoElegido = 0;
-    precio = 0;
-    cantidadProducto = 0;
-}
-
-console.log(arrayCaja2);
-alert("Su segunda caja está completa.");
-
-//Creo un array concatenando ambas cajas armadas, para tener el pedido.
-const arrayPedido = arrayCaja1.concat(arrayCaja2);
-console.log(arrayPedido);
-
-//La forma que encontré de tomar los valores fue mapeando la propiedad .subTotal de los objetos dentro del array.
-let arraySubtotales = arrayPedido.map(a => a.subTotal);
-console.log(arraySubtotales);
-
-//Luego los ordené de menor a mayor. Esto es únicamente para el desafío complementario.
-arraySubtotales.sort((a, b) => a - b);
-console.log(arraySubtotales);
-
-for (let i = 0; i < arraySubtotales.length; i++) {
-    valorFinal += arraySubtotales[i];
-}
-
-alert("El monto final a pagar es: $"+ valorFinal+". Proceda a elegir el método de pago.\nFin del simulador.");
+agregarParrafoConClase();

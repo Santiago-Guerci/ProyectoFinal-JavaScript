@@ -523,6 +523,39 @@ footer {
   z-index: 1;
 }
 
+#Carrito {
+  background-color: rgba(113, 33, 48, 0.8);
+  margin: 5% auto;
+  border-top: 2px solid blanchedalmond;
+  border-bottom: 2px solid blanchedalmond;
+  text-align: center;
+}
+
+.cartas {
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 18rem;
+}
+
+.card-title {
+  color: white;
+}
+
+.tituloCompra {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-header {
+  background-color: burlywood;
+  border: 1px solid black;
+}
+
 .btn {
   background-color: blanchedalmond;
   color: #291d20;
