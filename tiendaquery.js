@@ -52,11 +52,22 @@ $(document).ready(()=>{
         $(`#${producto.id}`).click(function(){
 
             $("#listaProductos").append(
-                `<li class="list-group-item">${producto.nombre}</li>`
+                `<li class="list-group-item dNone">${producto.nombre}</li>`
             );
 
         });
 
     }
+
+    $("#btnBorrar").click(function() {
+        $(".list-group-item").slideUp("fast", function() {
+            $(this).remove();
+        });
+    });
+
+    //Esta función va a guardar los prod del carrito en el localStorage, pero tengo que generar un array para pushear los valores
+    // $("#btnGuardar").click(function(){
+
+    // })
 
 })

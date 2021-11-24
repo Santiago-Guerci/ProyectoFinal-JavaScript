@@ -556,6 +556,10 @@ footer {
   border: 1px solid black;
 }
 
+.dNone {
+  display: none;
+}
+
 .btn {
   background-color: blanchedalmond;
   color: #291d20;
