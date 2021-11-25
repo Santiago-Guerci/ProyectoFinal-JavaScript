@@ -12,6 +12,11 @@ let arrayProductos = [];
 let arrayNombres = ['Box Desayuno', 'Box Minitortas', 'Box Surtidos', 'Box Vinos'];
 let arrayPrecios = [1500, 1600, 1000, 2000];
 let arrayImagenes = ['/Multimedia/boxDesayuno.PNG', '/Multimedia/boxMiniTortas.PNG', '/Multimedia/boxSurtidos.PNG', '/Multimedia/boxVinos.PNG'];
+let arrayCarrito = [];
+
+const URLJSONGET = "productos.json";
+let copiaProductos = []; //Por fines educativos, para generar el array de productos desde el JSON.
+const sessionStorageKey = 'CARRITO';
 
 function generarProductos() {
     for(let i=0; i < arrayNombres.length; i++){
@@ -26,6 +31,19 @@ function generarProductos() {
 
 generarProductos();
 console.log(arrayProductos);
+
+
+//Otra forma de generar los productos con Ajax y el JSON de productos.
+$.get(URLJSONGET, function(respuesta, estado) {
+    if(estado === "success") {
+        let misProductos = respuesta;
+        for (const item of misProductos) {
+            copiaProductos.push(new Producto(item.nombre, item.precio, item.imagen, item.id));
+        }
+    }
+});
+
+console.log(copiaProductos);
 
 //Ahora arranco a armar todo con jQuery
 //Armo las cards con los datos del arrayProductos
@@ -55,9 +73,13 @@ $(document).ready(()=>{
                 `<li class="list-group-item dNone">${producto.nombre}</li>`
             );
 
+            arrayCarrito.push(producto);
+
         });
 
     }
+
+    console.log(arrayCarrito);
 
     $("#btnBorrar").click(function() {
         $(".list-group-item").slideUp("fast", function() {
@@ -66,8 +88,10 @@ $(document).ready(()=>{
     });
 
     //Esta función va a guardar los prod del carrito en el localStorage, pero tengo que generar un array para pushear los valores
-    // $("#btnGuardar").click(function(){
-
-    // })
+    const carritoJSON = JSON.stringify(arrayCarrito);
+    console.log(carritoJSON);
+    $("#btnGuardar").click(function(){
+        sessionStorage.setItem(sessionStorageKey, carritoJSON);
+    });
 
 })

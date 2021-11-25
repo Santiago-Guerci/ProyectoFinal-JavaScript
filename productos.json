@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Box Desayuno",
+        "precio": 1500,
+        "imagen": "/Multimedia/boxDesayuno.PNG",
+        "id": 1
+    },
+    {
+        "nombre": "Box Minitortas",
+        "precio": 1600,
+        "imagen": "/Multimedia/boxMiniTortas.PNG",
+        "id": 2
+    },
+    {
+        "nombre": "Box Surtidos",
+        "precio": 1000,
+        "imagen": "/Multimedia/boxSurtidos.PNG",
+        "id": 3
+    },
+    {
+        "nombre": "Box Vinos",
+        "precio": 2000,
+        "imagen": "/Multimedia/boxVinos.PNG",
+        "id": 4
+    }
+]
