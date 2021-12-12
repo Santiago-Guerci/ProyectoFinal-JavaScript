@@ -1,0 +1,3 @@
+una función que le pida los datos al usuario, se genere un alert, y se borren todos los datos y puedas realizar otro pedido.
+arreglar tamaños productos
+arreglar animación de los productos
