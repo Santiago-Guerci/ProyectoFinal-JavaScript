@@ -61,17 +61,26 @@ $(document).ready(()=>{
 
     console.log(miCompra);
 
+
     $("#btnBorrar").click(function() {
         $(".list-group-item").slideUp("fast", function() {
             $(this).remove();
         });
-        miCompra = [];
+        miCompra.length = 0;
     });
 
     // Esta función va a guardar los prod del carrito en un JSON, para generar un historial de compras.
+    // Ya guarda el JSON, ahora estaría bueno que cree una key nueva por cada usuario 
     $("#btnGuardar").click(function(){
+        let nombreComprador = prompt("Ingrese su nombre");
         let miCompraJSON = JSON.stringify(miCompra);
-        localStorage.setItem("compraRealizada", miCompraJSON);
+        localStorage.setItem(`compra${nombreComprador}`, miCompraJSON);
+
+        alert("Su compra ha sido guardada");
+        $(".list-group-item").slideUp("fast", function() {
+            $(this).remove();
+        });
+        miCompra.length = 0;
     });
 
 })
