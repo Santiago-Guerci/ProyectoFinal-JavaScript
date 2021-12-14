@@ -7,6 +7,14 @@ class Producto {
     }
 }
 
+// class Compra {
+//     constructor(user, monto, id) {
+//         this.user = user;
+//         this.monto = monto;
+//         this.id = id;
+//     }
+// }
+
 let id = 0;
 let arrayProductos = [];
 let miCompra = [];
@@ -82,5 +90,9 @@ $(document).ready(()=>{
         });
         miCompra.length = 0;
     });
+
+    $("#btnVer").click(function() {
+        
+    })
 
 })

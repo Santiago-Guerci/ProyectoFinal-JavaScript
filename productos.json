@@ -8,19 +8,31 @@
     {
         "nombre": "Box Minitortas",
         "precio": 1600,
-        "imagen": "/Multimedia/boxMiniTortas.PNG",
+        "imagen": "/Multimedia/boxMiniTortas.png",
         "id": 2
     },
     {
         "nombre": "Box Surtidos",
         "precio": 1000,
-        "imagen": "/Multimedia/boxSurtidos.PNG",
+        "imagen": "/Multimedia/boxSurtidos.png",
         "id": 3
     },
     {
         "nombre": "Box Vinos",
         "precio": 2000,
-        "imagen": "/Multimedia/boxVinos.PNG",
+        "imagen": "/Multimedia/boxVinos.png",
         "id": 4
+    },
+    {
+        "nombre": "Box Macarons",
+        "precio": 1700,
+        "imagen": "/Multimedia/boxMacarons.png",
+        "id": 5
+    },
+    {
+        "nombre": "Box Conservas",
+        "precio": 2100,
+        "imagen": "/Multimedia/boxConservas.png",
+        "id": 6
     }
 ]

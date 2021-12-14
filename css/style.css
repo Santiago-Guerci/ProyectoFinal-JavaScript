@@ -533,14 +533,20 @@ footer {
   text-align: center;
 }
 
+#carritoContainer {
+  max-width: 1175px;
+}
+
 .cartas {
   justify-content: space-between;
   align-items: flex-end;
+  flex-wrap: wrap;
 }
 
 .card {
   background-color: rgba(0, 0, 0, 0.7);
   width: 18rem;
+  margin: 7px auto;
 }
 
 .card-title {
