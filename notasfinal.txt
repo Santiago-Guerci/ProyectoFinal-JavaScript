@@ -1,4 +1,0 @@
-una función que le pida los datos al usuario, se genere un alert, y se borren todos los datos y puedas realizar otro pedido.
-Podría hacer una sola key con el historial de carritos y 
-
-arreglar animación de los productos

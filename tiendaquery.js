@@ -7,17 +7,17 @@ class Producto {
     }
 }
 
-// class Compra {
-//     constructor(user, monto, id) {
-//         this.user = user;
-//         this.monto = monto;
-//         this.id = id;
-//     }
-// }
+class Compra {
+    constructor(user, productos) {
+        this.user = user;
+        this.productos = productos;
+    }
+}
 
 let id = 0;
 let arrayProductos = [];
 let miCompra = [];
+let compraUsuario = [];
 const URLJSONGET = "productos.json";
 
 
@@ -69,7 +69,7 @@ $(document).ready(()=>{
 
     console.log(miCompra);
 
-
+    //Boton que borra mi carrito actual, resetea el array.
     $("#btnBorrar").click(function() {
         $(".list-group-item").slideUp("fast", function() {
             $(this).remove();
@@ -77,12 +77,12 @@ $(document).ready(()=>{
         miCompra.length = 0;
     });
 
-    // Esta función va a guardar los prod del carrito en un JSON, para generar un historial de compras.
-    // Ya guarda el JSON, ahora estaría bueno que cree una key nueva por cada usuario 
+    // Este botón guarda los prod del carrito en un JSON, para generar un historial de compras.
     $("#btnGuardar").click(function(){
         let nombreComprador = prompt("Ingrese su nombre");
-        let miCompraJSON = JSON.stringify(miCompra);
-        localStorage.setItem(`compra${nombreComprador}`, miCompraJSON);
+        compraUsuario.push(new Compra(nombreComprador, miCompra));
+        let miCompraJSON = JSON.stringify(compraUsuario);
+        localStorage.setItem("comprasGeneradas", miCompraJSON);
 
         alert("Su compra ha sido guardada");
         $(".list-group-item").slideUp("fast", function() {
@@ -90,9 +90,4 @@ $(document).ready(()=>{
         });
         miCompra.length = 0;
     });
-
-    $("#btnVer").click(function() {
-        
-    })
-
 })
